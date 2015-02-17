@@ -4,6 +4,8 @@
 
 // page 158. Auxiliary Constructions
 object ExPage158 extends App {
+
+  // Task 1
   class ClothesWasher(val model:String,
                       val capacity:Double) {
     val cycles = 5
@@ -24,6 +26,10 @@ object ExPage158 extends App {
   
   var closeWasher1 = new ClothesWasher()
   println(closeWasher1.capacity + " " + closeWasher1.model)
+
+  // Task 2
+
+
 }
 
 
