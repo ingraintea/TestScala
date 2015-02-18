@@ -18,9 +18,20 @@ object CaseClasses extends App {
 //    Task 1
   case class Person(firstName: String, lastName: String, email: String)
   val p1 = Person("Vasia", "Nominarov", "as@wawa.com")
-  println("Name = " + p1.firstName + ". Surname = " + p1.lastName + ". Email = " + p1.email)
+//  println("Name = " + p1.firstName + ". Surname = " + p1.lastName + ". Email = " + p1.email)
 
   // Task 2
+  val peoples = Vector(Person("Vova", "Noma", "as@serka.com"), Person("Peop1", "Sigurn", "siga@asgirsen.com"))
+  println(peoples(1))
+
+  // Task 4
+  case class Dimention(var height: Int, var width: Int)
+  val dim = new Dimention(5, 7)
+  println("Height = " + dim.height)
+
+
+
+
 
 
 
