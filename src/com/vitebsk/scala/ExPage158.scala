@@ -56,7 +56,7 @@ object ExPage158 extends App {
   println("clW15 is = " + closeWasher15.model + " " + closeWasher15.capacity)
   println("clW16 is = " + closeWasher16.model + " " + closeWasher16.capacity)
 
-/* Output:
+/* Output for Task2:
 Constructor on-default
 Constructor: only capacity
 Constructor: only model
