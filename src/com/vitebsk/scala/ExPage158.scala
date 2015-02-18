@@ -56,6 +56,14 @@ object ExPage158 extends App {
   println("clW15 is = " + closeWasher15.model + " " + closeWasher15.capacity)
   println("clW16 is = " + closeWasher16.model + " " + closeWasher16.capacity)
 
+/* Output:
+Constructor on-default
+Constructor: only capacity
+Constructor: only model
+clW14 is = Keruna 10.0
+clW15 is = Morgot 12.0
+clW16 is = Fingolfin 14.6
+*/
 
 }
 
