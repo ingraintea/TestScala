@@ -49,12 +49,12 @@ object ExPage158 extends App {
   }
 
   val closeWasher14 = new ClothesWasher2()
-  val closeWasher15 = new ClothesWasher2(12)
-  val closeWasher16 = new ClothesWasher2("Fingolfin")
+//  val closeWasher15 = new ClothesWasher2(12)
+//  val closeWasher16 = new ClothesWasher2("Fingolfin")
 
   println("clW14 is = " + closeWasher14.model + " " + closeWasher14.capacity)
-  println("clW15 is = " + closeWasher15.model + " " + closeWasher15.capacity)
-  println("clW16 is = " + closeWasher16.model + " " + closeWasher16.capacity)
+//  println("clW15 is = " + closeWasher15.model + " " + closeWasher15.capacity)
+//  println("clW16 is = " + closeWasher16.model + " " + closeWasher16.capacity)
 
 /* Output for Task2:
 Constructor on-default

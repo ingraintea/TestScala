@@ -25,7 +25,26 @@ object ExPage159ClassEx extends App {
   info1.description = "Changed description"
   println("The another description = " + info1.description)
 
-  
+  // Task 3
+  // Just change _val name: String_ to _var name: String_
+
+  // Task 5
+  class SimpleTime(val sHours: Int, val sMinutes: Int = 0) {
+    def substractTime(aTime: SimpleTime): SimpleTime = {
+      val h = sHours - aTime.sHours
+      val m = sMinutes - aTime.sMinutes
+      if(h < 0) {
+        new SimpleTime(0, 0)
+      } else if(m >= 0) {
+        new SimpleTime(h, m)
+      } else {
+        new SimpleTime(h - 1, m + 60)
+      }
+    }
+  }
+
+
+
 
 
 
