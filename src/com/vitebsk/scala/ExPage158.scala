@@ -34,14 +34,17 @@ object ExPage158 extends App {
 
     def this(model: String) = {
       this(model, 14.6)
+      println("Constructor: only model")
     }
 
     def this(capacity: Double) = {
       this("Morgot", capacity)
+      println("Constructor: only capacity")
     }
 
     def this() = {
       this("Keruna", 10.0)
+      println("Constructor on-default")
     }
   }
 
