@@ -19,7 +19,14 @@ object ParameterizedTypes extends App {
   def explicitDouble(v1: Double, v2: Double, v3: Double): Vector[Double] = {
     Vector(v1, v2, v3)
   }
-  println(s"This is doubled numbers ${explicitDouble(2,1,4)(0)}")
+//  println(s"This is doubled numbers ${explicitDouble(2,1,4)(0)}")
+
+  // Task 2
+  def explicitList(vec: Vector[Double]): List[Double] = {
+    val list = vec.toList
+    list
+  }
+  println(s"Transformation from Vector to List ${explicitList(Vector(15, -10, 8, 22, 0.5))}")
 
 
 
