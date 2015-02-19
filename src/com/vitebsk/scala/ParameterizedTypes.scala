@@ -26,7 +26,15 @@ object ParameterizedTypes extends App {
     val list = vec.toList
     list
   }
-  println(s"Transformation from Vector to List ${explicitList(Vector(15, -10, 8, 22, 0.5))}")
+//  println(s"Transformation from Vector to List ${explicitList(Vector(15, -10, 8, 22, 0.5))}")
+
+  // Task 3
+  def explicitSet(vec: Vector[Double]): Set[Double] = {
+    val set = vec.toSet
+    set
+  }
+  println(s"Transformation from Vector to Set ${explicitSet(Vector(1, -1, 1, 2, 2, 0, 3, 4, 4))}")
+
 
 
 
