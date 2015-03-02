@@ -7,7 +7,7 @@ object FunctionsAsObjects extends App {
 
 
 
-  
+
 }
 
 
