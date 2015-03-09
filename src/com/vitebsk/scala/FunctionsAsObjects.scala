@@ -5,9 +5,6 @@
 object FunctionsAsObjects extends App {
 
 
-
-
-
 }
 
 
