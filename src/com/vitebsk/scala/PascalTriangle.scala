@@ -13,7 +13,7 @@ object PascalTriangle extends App {
    * @param r -- number of row
    * @return -- Int within Pascal's triangle
    */
-  def pascal(c: Int, r: Int): Int = {
+  def pascal(c: Int, r: Int): Long = {
     var xCell = 0 // Int within Pascal's triangle
     if (c > r) 0
     else {
@@ -48,6 +48,16 @@ object PascalTriangle extends App {
 
   println(s"(9-15) Expected 5005 but = ${pascal(9, 15)}")
   println(s"(7-20) Expected 77520 but = ${pascal(7, 20)}")
+  println(s"(10-30) Expected ??? but = ${pascal(10, 30)}")
+  println(s"(15-30) Expected ??? but = ${pascal(15, 30)}")
+  println(s"(10-40) Expected ??? but = ${pascal(10, 40)}")
+  println(s"(11-40) Expected ??? but = ${pascal(11, 40)}")
+  println(s"(12-40) Expected ??? but = ${pascal(12, 40)}")
+  println(s"(13-40) Expected ??? but = ${pascal(13, 40)}")
+
+  println(s"(15-40) Expected ??? but = ${pascal(15, 40)}")
+
+  println(s"(20-40) Expected ??? but = ${pascal(20, 40)}")
 
   println("\nZero as default")
   println(s"(1-0) Expected 0 but = ${pascal(1, 0)}")
