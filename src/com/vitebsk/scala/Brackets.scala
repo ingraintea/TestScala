@@ -76,42 +76,18 @@ object Brackets extends App {
       case ')' => -1
       case _ => 0
     }
-    def cutSymbol(x: Int, l: List[Char]): Int = l match {
-      case Nil => 0
+    def cutSymbol(x: Int, list: List[Char]): Int = list match {
+      case Nil => x
       case head :: tail =>
-        println(x + checkSym(head))
         cutSymbol(x + checkSym(head), tail)
     }
     cutSymbol(0, list) == 0
   }
 
-  /**
-   * функция brackets2 работает.
-   * при
-   * println(input4)
-   * println(brackets2(input4.toList))
-   * ее вывод:
-m m(()))
-0
-0
-0
-1
-2
-1
-0
--1
-true
-   * в конце она корректно подсчитывает баланс скобок = -1
-   * но почему-то в качестве значения дает true
-   * хотя по-идее должна давать false
-   * ни фига не пойму, почему
-   */
-
-  //  println(brackets2(input0.toList))
-  //  println(brackets2(input1.toList))
-  //  println(brackets2(input2.toList))
-  //  println(brackets2(input3.toList))
-  println(input4)
+  println(brackets2(input0.toList))
+  println(brackets2(input1.toList))
+  println(brackets2(input2.toList))
+  println(brackets2(input3.toList))
   println(brackets2(input4.toList))
 
 
