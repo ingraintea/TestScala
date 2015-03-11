@@ -33,8 +33,9 @@ object Brackets extends App {
 
   val input0 = "(Ene() bene (raba), quinter) ((finter) frog)"
   val input1 = ""
-  val input2 = "((()))"
+  val input2 = "())"
   val input3 = "Sm mess(("
+  val input4 = "m m(()))"
 
 
   /*    тебе надо использовать аккумулятор.
@@ -64,11 +65,54 @@ object Brackets extends App {
     cutSymbol(list) == 0
   }
 
+  /**
+   *
+   * @param list
+   * @return
+   */
+  def brackets2(list: List[Char]): Boolean = {
+    def checkSym(c: Char): Int = c match {
+      case '(' => 1
+      case ')' => -1
+      case _ => 0
+    }
+    def cutSymbol(x: Int, l: List[Char]): Int = l match {
+      case Nil => 0
+      case head :: tail =>
+        println(x + checkSym(head))
+        cutSymbol(x + checkSym(head), tail)
+    }
+    cutSymbol(0, list) == 0
+  }
 
-  println(brackets1(input0.toList))
-  println(brackets1(input1.toList))
-  println(brackets1(input2.toList))
-  println(brackets1(input3.toList))
+  /**
+   * функция brackets2 работает.
+   * при
+   * println(input4)
+   * println(brackets2(input4.toList))
+   * ее вывод:
+m m(()))
+0
+0
+0
+1
+2
+1
+0
+-1
+true
+   * в конце она корректно подсчитывает баланс скобок = -1
+   * но почему-то в качестве значения дает true
+   * хотя по-идее должна давать false
+   * ни фига не пойму, почему
+   */
+
+  //  println(brackets2(input0.toList))
+  //  println(brackets2(input1.toList))
+  //  println(brackets2(input2.toList))
+  //  println(brackets2(input3.toList))
+  println(input4)
+  println(brackets2(input4.toList))
 
 
 }
