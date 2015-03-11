@@ -21,7 +21,7 @@ object Brackets extends App {
       case ')' => -1
       case _ => 0
     }
-    def cutSymbol(x: Int, list: List[Char]): Int = list match {
+    def cutSymbol(x: Int, l: List[Char]): Int = l match {
       case Nil => x
       case head :: tail =>
         cutSymbol(x + checkSym(head), tail)
