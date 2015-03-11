@@ -4,71 +4,16 @@
 
 object Brackets extends App {
 
-  /**
-   * Exercise 2. ver 1.0
-   */
-  /**
-   *
-   * @param chars
-   * @return -- Boolean
-   */
-  def balance(chars: List[Char]): Boolean = {
-    var x = 0
-    if (chars.isEmpty) {
-      true
-    }
-    else {
-      def brackets(c: Char): Int = c match {
-        case '(' => 1
-        case ')' => -1
-        case _ => 0
-      }
-
-      for (i <- chars) {
-        x += brackets(i)
-      }
-      x == 0
-    }
-  }
-
   val input0 = "(Ene() bene (raba), quinter) ((finter) frog)"
   val input1 = ""
   val input2 = "())"
   val input3 = "Sm mess(("
   val input4 = "m m(()))"
 
-
-  /*    тебе надо использовать аккумулятор.
-      как только ты встретил ( - прибавляешь 1
-      как только ) - отнимаешь 1
-      и на каждом шаге у тебя должно выполняться условие, что acc >= 0 - в противном случае выходим с false,
-      а есл дошли до конца листа и acc == 0 - то все*/
-
-  /**
-   * Exercise 2. ver. 1.1
-   * @return -- Boolean
-   */
-  var x: Int = 0
-
-  def brackets1(list: List[Char]): Boolean = {
-    def checkSym(c: Char): Int = c match {
-      case '(' => 1
-      case ')' => -1
-      case _ => 0
-    }
-    def cutSymbol(l: List[Char]): Int = l match {
-      case head :: tail =>
-        x += checkSym(head)
-        cutSymbol(tail)
-      case Nil => x
-    }
-    cutSymbol(list) == 0
-  }
-
   /**
    *
    * @param list
-   * @return
+   * @return -- Boolean
    */
   def brackets2(list: List[Char]): Boolean = {
     def checkSym(c: Char): Int = c match {
@@ -90,6 +35,20 @@ object Brackets extends App {
   println(brackets2(input3.toList))
   println(brackets2(input4.toList))
 
+
+  //From Artsiom Miklushow
+/*  def balance(chars: List[Char]): Boolean = {
+    balanceTail(0, chars)
+  }
+
+  def balanceTail(acc: Int, chs: List[Char]): Boolean = {
+    if (chs.isEmpty && acc == 0) true
+    else if (acc >= 0 && !chs.isEmpty) {
+      if ('(' == chs.head) balanceTail(acc + 1, chs.tail);
+      else if (')' == chs.head) balanceTail(acc - 1, chs.tail);
+      else balanceTail(acc, chs.tail);
+    } else false
+  }*/
 
 }
 
